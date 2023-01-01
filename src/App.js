@@ -1,25 +1,29 @@
 import logo from './logo.svg';
+import { ThemeProvider } from 'styled-components'
+import {theme, Button} from "./components/Button"
 import './App.css';
 
-function App() {
+const App = () => {
+  const buttonStyle = {
+    display : 'flex',
+    flexDirection : 'column',
+    gap: '2em',
+    margin : '2em'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <div style={buttonStyle}>
+
+      {/* <Button color='primary' size='large'>Default</Button>
+      <Button color='secondary' size='small'>Default</Button>
+      <Button color='danger' size='small'>Default</Button> */}
+
+      <Button />
+      <Button variant="text" />
+      <Button variant="outline" />
+      </div>
+    </ThemeProvider>
+  )
 }
 
 export default App;
