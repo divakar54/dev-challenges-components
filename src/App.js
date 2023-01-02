@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import { ThemeProvider } from 'styled-components'
-import {theme, Button} from "./components/Button"
+import {Button, Btn} from "./components/Button"
+import { mdiAccount, mdiBabyBuggyOff, mdiBatteryLow } from '@mdi/js'
 import './App.css';
 
 const App = () => {
@@ -11,7 +10,7 @@ const App = () => {
     margin : '2em'
   }
   return (
-    <ThemeProvider theme={theme}>
+
       <div style={buttonStyle}>
 
       {/* <Button color='primary' size='large'>Default</Button>
@@ -20,9 +19,14 @@ const App = () => {
 
       <Button />
       <Button variant="text" />
-      <Button variant="outline" />
+      <Button variant="outline" leftIcon={mdiAccount} />
+      <Button variant="outline" rightIcon={mdiBatteryLow} />
+      <Button color="primary" size="lg"/>
+      <Button color="secondary" />
+      <Button color="danger" disabled size="lg" rightIcon={mdiBatteryLow}/>
+      <Btn variant="text" size="lg" disabled color="primary" />
       </div>
-    </ThemeProvider>
+
   )
 }
 

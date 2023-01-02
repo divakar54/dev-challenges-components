@@ -1,0 +1,11 @@
+.left-icon{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+
+.right-icon{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
