@@ -1,6 +1,6 @@
-import Icon from '@mdi/react'
 import PropTypes from 'prop-types';
-import "./Button.css";
+import ButtonIcon from "../Icon/index"
+import "./style.css"
 
 const variantArray = {
   "text" : {
@@ -24,7 +24,7 @@ const colorObject = {
   },
   "danger": {
     color: 'white',
-    backgroundColor: '#D32F2F'
+    backgroundColor: '#D32F2F',
   }
 }
 
@@ -55,19 +55,11 @@ const defaultButtonStyle = {
   borderColor: '',
   cursor: 'pointer',
   boxShadow: '0px 2px 3px 0px #33333333',
-  position: 'relative'
+  position: 'relative',
 }
 
-export const Btn = (props) => {
-  console.log(props);
-  return(
-    <button {...props}>
-      text
-    </button>
-  )
-}
 export const Button = ({variant, color, size, text="Default", leftIcon, rightIcon, ...props}) => {
-  console.log(props)
+ 
   const computedStyle = () => {
     const width = (leftIcon || rightIcon) && {width: '105px'};
     return{
@@ -80,23 +72,14 @@ export const Button = ({variant, color, size, text="Default", leftIcon, rightIco
   }
 
   return(
-    <button {...props} style={computedStyle()}>
+    <button {...props} style={computedStyle()} className='button-group'>
      
       {leftIcon && 
-        <Icon path={leftIcon} 
-        className='left-icon'
-        rotate={180}
-        size={0.75}
-        horizontal
-        vertical />}
+        <ButtonIcon icon={leftIcon} iconClassName={'left-icon'} />}
       {text}
       {rightIcon && 
-        <Icon path={rightIcon} 
-        className='right-icon'
-        rotate={180}
-        size={0.75}
-        horizontal
-        vertical />}
+        <ButtonIcon icon={rightIcon} iconClassName={'right-icon'} />}
+        
     </button>
   )
 }

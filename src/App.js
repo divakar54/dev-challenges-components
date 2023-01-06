@@ -1,5 +1,5 @@
-import {Button, Btn} from "./components/Button"
-import { mdiAccount, mdiBabyBuggyOff, mdiBatteryLow } from '@mdi/js'
+import {Button} from "./components/Button"
+import { mdiAccount, mdiBatteryLow } from '@mdi/js'
 import './App.css';
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
       <Button color="primary" size="lg"/>
       <Button color="secondary" />
       <Button color="danger" disabled size="lg" rightIcon={mdiBatteryLow}/>
-      <Btn variant="text" size="lg" disabled color="primary" />
+      
       </div>
 
   )

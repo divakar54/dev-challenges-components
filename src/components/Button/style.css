@@ -1,0 +1,11 @@
+.button-group{
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover{
+    background-color: #AEAEAE;
+}
