@@ -1,3 +1,18 @@
+// 1st approach, add css property for 
+// each prop like this https://javascript.plainenglish.io/how-to-create-a-fully-customizable-button-component-in-react-8e286cb25712
+// const Button = ({color = "blue",name = "name",size = "medium",type = null}) => {
+//   return(
+//    <div className="button-container">
+//     <button className={`custom-button ${color} ${size} ${type}`}> {name}</button>
+//    </div>
+//   )
+//   }
+// in a separate Button.css file we can add the corresponding css classes
+
+// 2nd approach, use styled components to create custom objects which can be mapped using props
+
+// 3rd approach, think of something else !!!
+
 import PropTypes from 'prop-types';
 import ButtonIcon from "../Icon/index"
 import "./style.css"
