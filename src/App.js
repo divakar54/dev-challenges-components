@@ -7,11 +7,10 @@ const App = () => {
     display : 'flex',
     flexDirection : 'column',
     gap: '2em',
-    margin : '2em'
   }
   return (
 
-      <div style={buttonStyle}>
+      <div className="font-noto m-8" style={buttonStyle}>
 
       {/* <Button color='primary' size='large'>Default</Button>
       <Button color='secondary' size='small'>Default</Button>
